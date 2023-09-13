@@ -1,19 +1,156 @@
 {
-  "posts": [
+  "data": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "active",
+      "Actions": ":",
+      "id": 1
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "active",
+      "Actions": ":",
+      "id": 2
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "active",
+      "Actions": ":",
+      "id": 3
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "Active",
+      "Actions": ":",
+      "id": 4
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "Active",
+      "Actions": ":",
+      "id": 5
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "Active",
+      "Actions": ":",
+      "id": 6
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "Active",
+      "Actions": ":",
+      "id": 7
+    },
+    {
+      "Name": "shivam",
+      "Description": "music clasees",
+      "Instructor": "satyam",
+      "Instrument": "guitar",
+      "Day_of_Week": "wednesday",
+      "Students": 40,
+      "Price": "$40",
+      "Status": "Active",
+      "Actions": ":",
+      "id": 8
     }
   ],
-  "comments": [
+  "courseData": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "course_Name": "dfas",
+      "Description": "asfd",
+      "Instructor": "fdsaf",
+      "Instrument": "dsafas",
+      "Day_of_Week": "dasfdas",
+      "Price": "50",
+      "id": 1
+    },
+    {
+      "course_Name": "violin course",
+      "Description": "violin best teacher",
+      "Instructor": "satyam hi h",
+      "Instrument": "violin",
+      "Day_of_Week": "",
+      "Price": "500",
+      "id": 2
+    },
+    {
+      "course_Name": "piano specialist",
+      "Description": "piano best teacher",
+      "Instructor": "satyam jaiswal",
+      "Instrument": "",
+      "Day_of_Week": "",
+      "Price": "300",
+      "id": 3
+    },
+    {
+      "course_Name": "piano specialist",
+      "Description": "piano best teacher",
+      "Instructor": "satyam jaiswal",
+      "Instrument": "piano",
+      "Day_of_Week": "saturday",
+      "Price": "300",
+      "id": 4
+    },
+    {
+      "course_Name": "",
+      "Description": "",
+      "Instructor": "",
+      "Instrument": "",
+      "Day_of_Week": "",
+      "Price": "",
+      "id": 5
+    },
+    {
+      "course_Name": "",
+      "Description": "",
+      "Instructor": "",
+      "Instrument": "",
+      "Day_of_Week": "",
+      "Price": "",
+      "id": 6
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
