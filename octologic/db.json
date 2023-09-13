@@ -1,156 +1,527 @@
 {
-  "data": [
+  "CourseData": [
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "active",
-      "Actions": ":",
-      "id": 1
+      "course_Name": "Introduction to Piano",
+      "Description": "Learn the basics of playing the piano.",
+      "Instructor": "John Smith",
+      "Instrument": "Piano",
+      "Day_of_Week": "Monday",
+      "Students": 15,
+      "Price": 200,
+      "Status": "Open",
+      "id": "001"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "active",
-      "Actions": ":",
-      "id": 2
+      "course_Name": "Guitar Masterclass",
+      "Description": "Advanced guitar techniques for experienced players.",
+      "Instructor": "Emily Johnson",
+      "Instrument": "Guitar",
+      "Day_of_Week": "Wednesday",
+      "Students": 10,
+      "Price": 250,
+      "Status": "Open",
+      "id": "002"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "active",
-      "Actions": ":",
-      "id": 3
+      "course_Name": "Violin for Beginners",
+      "Description": "A course for those new to the violin.",
+      "Instructor": "Sarah Davis",
+      "Instrument": "Violin",
+      "Day_of_Week": "Tuesday",
+      "Students": 12,
+      "Price": 180,
+      "Status": "Open",
+      "id": "003"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "Active",
-      "Actions": ":",
-      "id": 4
+      "course_Name": "Drumming Workshop",
+      "Description": "Learn various drumming styles and rhythms.",
+      "Instructor": "Michael Wilson",
+      "Instrument": "Drums",
+      "Day_of_Week": "Thursday",
+      "Students": 8,
+      "Price": 220,
+      "Status": "Open",
+      "id": "004"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "Active",
-      "Actions": ":",
-      "id": 5
+      "course_Name": "Flute Ensemble",
+      "Description": "Join a group of flute enthusiasts for ensemble playing.",
+      "Instructor": "Olivia Lee",
+      "Instrument": "Flute",
+      "Day_of_Week": "Friday",
+      "Students": 10,
+      "Price": 190,
+      "Status": "Open",
+      "id": "005"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "Active",
-      "Actions": ":",
-      "id": 6
+      "course_Name": "Saxophone Jazz",
+      "Description": "Explore the world of jazz on the saxophone.",
+      "Instructor": "Daniel Brown",
+      "Instrument": "Saxophone",
+      "Day_of_Week": "Monday",
+      "Students": 9,
+      "Price": 230,
+      "Status": "Open",
+      "id": "006"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "Active",
-      "Actions": ":",
-      "id": 7
+      "course_Name": "Trumpet Mastery",
+      "Description": "Advanced trumpet techniques and improvisation.",
+      "Instructor": "Sophia Martinez",
+      "Instrument": "Trumpet",
+      "Day_of_Week": "Wednesday",
+      "Students": 7,
+      "Price": 240,
+      "Status": "Open",
+      "id": "007"
     },
     {
-      "Name": "shivam",
-      "Description": "music clasees",
-      "Instructor": "satyam",
-      "Instrument": "guitar",
-      "Day_of_Week": "wednesday",
-      "Students": 40,
-      "Price": "$40",
-      "Status": "Active",
-      "Actions": ":",
-      "id": 8
+      "course_Name": "Bass Guitar Basics",
+      "Description": "Learn the fundamentals of playing bass guitar.",
+      "Instructor": "Liam Turner",
+      "Instrument": "Bass Guitar",
+      "Day_of_Week": "Tuesday",
+      "Students": 11,
+      "Price": 210,
+      "Status": "Open",
+      "id": "008"
+    },
+    {
+      "course_Name": "Cello for All Ages",
+      "Description": "A course suitable for all age groups interested in the cello.",
+      "Instructor": "Ava Smith",
+      "Instrument": "Cello",
+      "Day_of_Week": "Thursday",
+      "Students": 13,
+      "Price": 220,
+      "Status": "Open",
+      "id": "009"
+    },
+    {
+      "course_Name": "Keyboard Essentials",
+      "Description": "Learn the basics of keyboard playing.",
+      "Instructor": "Ethan Harris",
+      "Instrument": "Keyboard",
+      "Day_of_Week": "Friday",
+      "Students": 10,
+      "Price": 200,
+      "Status": "Open",
+      "id": "010"
+    },
+    {
+      "course_Name": "Harp for Beginners",
+      "Description": "A beginner's course on playing the harp.",
+      "Instructor": "Mia Turner",
+      "Instrument": "Harp",
+      "Day_of_Week": "Monday",
+      "Students": 6,
+      "Price": 250,
+      "Status": "Open",
+      "id": "011"
+    },
+    {
+      "course_Name": "Clarinet Workshop",
+      "Description": "Explore advanced clarinet techniques and performance.",
+      "Instructor": "Noah Davis",
+      "Instrument": "Clarinet",
+      "Day_of_Week": "Wednesday",
+      "Students": 8,
+      "Price": 230,
+      "Status": "Open",
+      "id": "012"
+    },
+    {
+      "course_Name": "Trombone Ensemble",
+      "Description": "Join a group of trombone players for ensemble playing.",
+      "Instructor": "Sophie Wilson",
+      "Instrument": "Trombone",
+      "Day_of_Week": "Tuesday",
+      "Students": 9,
+      "Price": 210,
+      "Status": "Open",
+      "id": "013"
+    },
+    {
+      "course_Name": "Accordion Masterclass",
+      "Description": "Advanced techniques and performance for accordion players.",
+      "Instructor": "Jack Green",
+      "Instrument": "Accordion",
+      "Day_of_Week": "Thursday",
+      "Students": 7,
+      "Price": 240,
+      "Status": "Open",
+      "id": "014"
     }
   ],
-  "courseData": [
+  "AllData":
+  [
     {
-      "course_Name": "dfas",
-      "Description": "asfd",
-      "Instructor": "fdsaf",
-      "Instrument": "dsafas",
-      "Day_of_Week": "dasfdas",
-      "Price": "50",
-      "id": 1
+      "id": "001",
+      "enrolment no.": "001",
+      "student name": "John Doe",
+      "fees": "500",
+      "enrolment_date": "2023-09-13",
+      "course_name": "Classical Piano",
+      "instrument": "Grand Piano"
     },
     {
-      "course_Name": "violin course",
-      "Description": "violin best teacher",
-      "Instructor": "satyam hi h",
-      "Instrument": "violin",
-      "Day_of_Week": "",
-      "Price": "500",
-      "id": 2
+      "id": "002",
+      "enrolment no.": "002",
+      "student name": "Jane Smith",
+    "fees": "450",
+      "enrolment_date": "2023-09-14",
+      "course_name": "Acoustic Guitar",
+      "instrument": "Steel-String Guitar"
     },
     {
-      "course_Name": "piano specialist",
-      "Description": "piano best teacher",
-      "Instructor": "satyam jaiswal",
-      "Instrument": "",
-      "Day_of_Week": "",
-      "Price": "300",
-      "id": 3
+      "id": "003",
+      "enrolment no.": "003",
+      "student name": "Alice Johnson",
+    "fees": "550",
+      "enrolment_date": "2023-09-15",
+      "course_name": "Classical Violin",
+      "instrument": "Violin"
     },
     {
-      "course_Name": "piano specialist",
-      "Description": "piano best teacher",
-      "Instructor": "satyam jaiswal",
-      "Instrument": "piano",
-      "Day_of_Week": "saturday",
-      "Price": "300",
-      "id": 4
+      "id": "004",
+      "enrolment no.": "004",
+      "student name": "Bob Wilson",
+   "fees": "600",
+      "enrolment_date": "2023-09-16",
+      "course_name": "Rock Drums",
+      "instrument": "Drum Kit"
     },
     {
-      "course_Name": "",
-      "Description": "",
-      "Instructor": "",
-      "Instrument": "",
-      "Day_of_Week": "",
-      "Price": "",
-      "id": 5
+      "id": "005",
+      "enrolment no.": "005",
+      "student name": "Eva Brown",
+   "fees": "520",
+      "enrolment_date": "2023-09-17",
+      "course_name": "Classical Flute",
+      "instrument": "Flute"
     },
     {
-      "course_Name": "",
-      "Description": "",
-      "Instructor": "",
-      "Instrument": "",
-      "Day_of_Week": "",
-      "Price": "",
-      "id": 6
+      "id": "006",
+      "enrolment no.": "006",
+      "student name": "Michael Lee",
+           "fees": "580",
+      "enrolment_date": "2023-09-18",
+      "course_name": "Jazz Saxophone",
+      "instrument": "Alto Saxophone"
+    },
+    {
+      "id": "007",
+      "enrolment no.": "007",
+      "student name": "Olivia Miller",
+       "fees": "530",
+      "enrolment_date": "2023-09-19",
+      "course_name": "Brass Trumpet",
+      "instrument": "Trumpet"
+    },
+    {
+      "id": "008",
+      "enrolment no.": "008",
+      "student name": "David Davis",
+      
+      "fees": "620",
+      "enrolment_date": "2023-09-20",
+      "course_name": "Electric Bass Guitar",
+      "instrument": "Bass Guitar"
+    },
+    {
+      "id": "009",
+      "enrolment no.": "009",
+      "student name": "Sophia Wilson",
+   "fees": "570",
+      "enrolment_date": "2023-09-21",
+      "course_name": "Classical Cello",
+      "instrument": "Cello"
+    },
+    {
+      "id": "010",
+      "enrolment no.": "010",
+      "student name": "Daniel Brown",
+        "fees": "540",
+      "enrolment_date": "2023-09-22",
+      "course_name": "Electronic Keyboard",
+      "instrument": "Keyboard"
+    },
+    {
+      "id": "011",
+      "enrolment no.": "011",
+      "student name": "Emma Taylor",
+"fees": "600",
+      "enrolment_date": "2023-09-23",
+      "course_name": "Concert Harp",
+      "instrument": "Harp"
+    },
+    {
+      "id": "012",
+      "enrolment no.": "012",
+      "student name": "William Green",
+        "fees": "520",
+      "enrolment_date": "2023-09-24",
+      "course_name": "Wooden Clarinet",
+      "instrument": "Clarinet"
+    },
+    {
+      "id": "013",
+      "enrolment no.": "013",
+      "student name": "Mia Martinez",
+        "fees": "580",
+      "enrolment_date": "2023-09-25",
+      "course_name": "Brass Trombone",
+      "instrument": "Trombone"
+    },
+    {
+      "id": "014",
+      "enrolment no.": "014",
+      "student name": "James Lee",
+           "fees": "540",
+      "enrolment_date": "2023-09-26",
+      "course_name": "Accordion",
+      "instrument": "Accordion"
+    },
+    {
+      "id":
+  
+   "015",
+      "enrolment no.": "015",
+      "student name": "Lily Hernandez",
+           "fees": "550",
+      "enrolment_date": "2023-09-27",
+      "course_name": "Concert Xylophone",
+      "instrument": "Xylophone"
+    },
+    {
+      "id": "016",
+      "enrolment no.": "016",
+      "student name": "Matthew Robinson",
+"fees": "510",
+      "enrolment_date": "2023-09-28",
+      "course_name": "Wooden Oboe",
+      "instrument": "Oboe"
+    },
+    {
+      "id": "017",
+      "enrolment no.": "017",
+      "student name": "Ava White",
+        "fees": "590",
+      "enrolment_date": "2023-09-29",
+      "course_name": "Scottish Bagpipes",
+      "instrument": "Bagpipes"
+    },
+    {
+      "id": "018",
+      "enrolment no.": "018",
+      "student name": "Jack Harris",
+"fees": "530",
+      "enrolment_date": "2023-09-30",
+      "course_name": "Brass Tuba",
+      "instrument": "Tuba"
+    },
+    {
+      "id": "019",
+      "enrolment no.": "019",
+      "student name": "Charlotte Martin",
+        "fees": "560",
+      "enrolment_date": "2023-10-01",
+      "course_name": "Mandolin",
+      "instrument": "Mandolin"
+    },
+    {
+      "id": "020",
+      "enrolment no.": "020",
+      "student name": "Noah Allen",
+"fees": "600",
+      "enrolment_date": "2023-10-02",
+      "course_name": "Folk Harp",
+      "instrument": "Harp"
+    },
+    {
+      "id": "021",
+      "enrolment no.": "021",
+      "student name": "Grace Turner",
+           "fees": "540",
+      "enrolment_date": "2023-10-03",
+      "course_name": "Button Accordion",
+      "instrument": "Accordion"
+    },
+    {
+      "id": "022",
+      "enrolment no.": "022",
+      "student name": "Daniel Walker",
+   "fees": "550",
+      "enrolment_date": "2023-10-04",
+      "course_name": "5-String Banjo",
+      "instrument": "Banjo"
+    },
+    {
+      "id": "023",
+      "enrolment no.": "023",
+      "student name": "Olivia Nelson",
+   "fees": "580",
+      "enrolment_date": "2023-10-05",
+      "course_name": "Indian Sitar",
+      "instrument": "Sitar"
+    },
+    {
+      "id": "024",
+      "enrolment no.": "024",
+      "student name": "Michael Turner",
+        "fees": "560",
+      "enrolment_date": "2023-10-06",
+      "course_name": "Bluegrass Mandolin",
+      "instrument": "Mandolin"
+    },
+    {
+      "id": "025",
+      "enrolment no.": "025",
+      "student name": "Sophia Harris",
+        "fees": "520",
+      "enrolment_date": "2023-10-07",
+      "course_name": "Bass Clarinet",
+      "instrument": "Clarinet"
+    },
+    {
+      "id": "026",
+      "enrolment no.": "026",
+      "student name": "Ethan Lewis",
+        "fees": "580",
+      "enrolment_date": "2023-10-08",
+      "course_name": "Jazz Trombone",
+      "instrument": "Trombone"
+    },
+    {
+      "id": "027",
+      "enrolment no.": "027",
+      "student name": "Ava Hall",
+           "fees": "540",
+      "enrolment_date": "2023-10-09",
+      "course_name": "Piano Accordion",
+      "instrument": "Accordion"
+    },
+    {
+      "id": "028",
+      "enrolment no.": "028",
+      "student name": "Liam Edwards",
+           "fees": "550",
+      "enrolment_date": "2023-10-10",
+      "course_name": "Marimba",
+      "instrument": "Xylophone"
+    },
+    {
+      "id": "029",
+      "enrolment no.": "029",
+      "student name": "Sophie Allen",
+"fees": "510",
+      "enrolment_date": "2023-10-11",
+      "course_name": "English Horn",
+      "instrument": "Oboe"
+    },
+    {
+      "id": "030",
+      "enrolment no.": "030",
+      "student name": "Benjamin Turner",
+        "fees": "590",
+      "enrolment_date": "2023-10-12",
+      "course_name": "Irish Uilleann Pipes",
+      "instrument": "Bagpipes"
+    },
+    {
+      "id": "031",
+      "enrolment no.": "031",
+      "student name": "Aria Lee",
+"fees": "530",
+      "enrolment_date": "2023-10-13",
+      "course_name": "Concert Tuba",
+      "instrument": "Tuba"
+    },
+    {
+      "id": "032",
+      "enrolment no.": "032",
+      "student name": "William Wilson",
+        "fees": "560",
+      "enrolment_date": "2023-10-14",
+      "course_name": "Classical Mandolin",
+      "instrument": "Mandolin"
+    },
+    {
+     
+  
+   "id": "033",
+      "enrolment no.": "033",
+      "student name": "Ella Martin",
+           "fees": "540",
+      "enrolment_date": "2023-10-15",
+      "course_name": "Concertina",
+      "instrument": "Accordion"
+    },
+    {
+      "id": "034",
+      "enrolment no.": "034",
+      "student name": "James White",
+      "fees": "550",
+      "enrolment_date": "2023-10-16",
+      "course_name": "Bluegrass Banjo",
+      "instrument": "Banjo"
+    },
+    {
+      "id": "035",
+      "enrolment no.": "035",
+       "student name": "Sophia Hernandez",
+      "fees": "580",
+      "enrolment_date": "2023-10-17",
+      "course_name": "Classical Indian Sitar",
+      "instrument": "Sitar"
+    },
+    {
+      "id": "036",
+      "enrolment no.": "036",
+      "student name": "Ethan Smith",
+      "fees": "560",
+      "enrolment_date": "2023-10-18",
+      "course_name": "Folk Mandolin",
+      "instrument": "Mandolin"
+    },
+    {
+      "id": "037",
+      "enrolment no.": "037",
+      "student name": "Lily Turner",
+      "fees": "520",
+      "enrolment_date": "2023-10-19",
+      "course_name": "Eb Clarinet",
+      "instrument": "Clarinet"
+    },
+    {
+      "id": "038",
+      "enrolment no.": "038",
+      "student name": "Noah Wilson",
+      "fees": "580",
+      "enrolment_date": "2023-10-20",
+      "course_name": "Bass Trombone",
+      "instrument": "Trombone"
+    },
+    {
+      "id": "039",
+      "enrolment no.": "039",
+      "student name": "Ava Davis",
+      "fees": "540",
+      "enrolment_date": "2023-10-21",
+      "course_name": "Concertina",
+      "instrument": "Accordion"
+    },
+    {
+      "id": "040",
+      "enrolment no.": "040",
+      "student name": "Elijah Green",
+      "fees": "550",
+      "enrolment_date": "2023-10-22",
+      "course_name": "Vibraphone",
+      "instrument": "Xylophone"
     }
   ]
+  
 }
