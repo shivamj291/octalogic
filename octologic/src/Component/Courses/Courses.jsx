@@ -4,6 +4,7 @@ import { ActionCourse } from "../../Store/Action";
 
 export default function Courses() {
   const [state, setState] = useState([]);
+  const [data,setData] = useState([])
   const [input,setInput] = useState({
     course_Name: "",
     Description: "",
@@ -12,6 +13,12 @@ export default function Courses() {
     Day_of_Week: "",
     Price: "",
   })
+ 
+
+  useEffect(() => {
+    getData();
+  }, []);
+
 
   function call(str){
     const splitStr = str.split(' ')
@@ -24,14 +31,13 @@ export default function Courses() {
   }
   console.log(input)
 
-  useEffect(() => {
-    getData();
-  }, []);
+ 
 
   async function getData() {
    
     const data = await axios.get("http://localhost:8080/CourseData");
     await ActionCourse(data.data)
+    await setData(data.data)
     setState(data.data)
   }
 
@@ -41,6 +47,42 @@ export default function Courses() {
     const data = await axios.post("http://localhost:8080/courseData",PostData);
     getData();
   }
+
+
+  // search 
+
+
+
+function searchCourses(keyword) {
+  
+  keyword = keyword.toLowerCase();
+
+  const filterArr =  state?.filter(course => {
+   
+    return Object.values(course).some(value => {
+      if (typeof value === 'string') {
+        return value.toLowerCase().includes(keyword);
+      }
+      return false;
+    });
+  
+   
+  });
+  console.log(filterArr)
+  if(keyword===''){
+    setState(data)
+  }else{
+    setState(filterArr)
+  }
+ 
+}
+
+
+
+
+
+
+
   return (
     <div className="w-full pt-6 bg-gray-100">
    
@@ -52,7 +94,7 @@ export default function Courses() {
             <h2 className="font-semibold text-lg text-gray-500 m-auto ml-10 text-left">
                  COURSE LIST
             </h2>
-            <span> <input type="text" placeholder='Search' className="w-10/12 text-sm px-7 py-1" /></span>
+            <span> <input type="text" placeholder='Search' className="w-10/12 text-sm px-7 py-1"  onChange={(e)=>searchCourses(e.target.value)}/></span>
            
         </div>
        
