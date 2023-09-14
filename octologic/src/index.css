@@ -24,6 +24,16 @@
   font-size: 15px;
 }
 .form{
-  display: none;
+
+  color:rgb(200, 199, 199)
 }
+
+.hideDiv{
+  margin:auto;
+  position: absolute;
+  width: 80%;
+  left:-160px;
+  
+}
+
 

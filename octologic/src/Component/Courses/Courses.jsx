@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useDebugValue, useEffect, useRef, useState } from "react";
 import { ActionCourse } from "../../Store/Action";
 
 export default function Courses() {
   const [state, setState] = useState([]);
   const [data,setData] = useState([])
+  const [hover,setHover] = useState(false)
+  const [flag,setFlag] = useState(false);
+  const [isflag,setIsFlag] = useState(false);
   const [input,setInput] = useState({
     course_Name: "",
     Description: "",
@@ -14,12 +17,15 @@ export default function Courses() {
     Price: "",
   })
  
+  const reff = useRef(null)
+  const ref_b = useRef(null)
+  const ref_d = useRef(null)
 
   useEffect(() => {
     getData();
   }, []);
 
-
+console.log(flag)
   function call(str){
     const splitStr = str.split(' ')
     if(splitStr.length > 2){
@@ -29,7 +35,7 @@ export default function Courses() {
       return str
      }
   }
-  console.log(input)
+
 
  
 
@@ -39,6 +45,57 @@ export default function Courses() {
     await ActionCourse(data.data)
     await setData(data.data)
     setState(data.data)
+  }
+//display form 
+
+function displayForm(){
+  reff.current.setAttribute('style','background:rgb(200, 199, 199)')
+  ref_b.current.setAttribute('style','background:rgb(200, 199, 199)')
+  ref_d.current.setAttribute('style','background:rgb(200, 199, 199)')
+  setFlag(true)
+}
+// hide form 
+
+function hideForm(){
+  reff.current.setAttribute('style','background:unset')
+  ref_b.current.setAttribute('style','background:#f3f4f6')
+  ref_d.current.setAttribute('style','background:white')
+  setFlag(false)
+}
+  // display box
+
+  const displayBox =(ele)=>{
+  
+    reff.current.setAttribute('style','background:rgb(200, 199, 199)')
+    ref_b.current.setAttribute('style','background:rgb(200, 199, 199)')
+    ref_d.current.setAttribute('style','background:rgb(200, 199, 199)')
+ const updatedCourseData = [];
+ state?.map((course) => {
+    if (course.id === ele.id) {
+   
+     updatedCourseData.push({ ...course, flag:true });
+    } else {
+      updatedCourseData.push(course);
+    }
+  }); 
+  setHover(true)
+  setState(updatedCourseData); 
+}
+
+
+
+
+  
+
+  
+  const hideBox =()=>{
+    reff.current.setAttribute('style','background:unset')
+    ref_b.current.setAttribute('style','background:#f3f4f6')
+    ref_d.current.setAttribute('style','background:white')
+    console.log(data)
+    setHover(false)
+    setState(data)
+
   }
 
   async function addData() {
@@ -74,7 +131,17 @@ function searchCourses(keyword) {
   }else{
     setState(filterArr)
   }
- 
+
+
+  function changeflag(){
+        setFlag(true);
+        setIsFlag(true)
+  }
+    
+
+  // display box
+
+  
 }
 
 
@@ -83,10 +150,12 @@ function searchCourses(keyword) {
 
 
 
+
+
   return (
-    <div className="w-full pt-6 bg-gray-100">
+    <div className="w-full pt-6 bg-gray-100" ref={ref_b} onClick={hover&&hideBox}>
    
-      <div className="w-full ">
+      <div className="w-full " onClick={()=>isflag&&setFlag(false)}>
         <h1 className="font-semibold text-gray-500 ml-10 mb-8  text-left" style={{fontSize:'29px'}}>
           Courses
         </h1>
@@ -98,9 +167,9 @@ function searchCourses(keyword) {
            
         </div>
        
-       <div className="bg-white w-11/12 rounded-lg mt-4 py-5 px-7 m-auto">
+       <div className="bg-white w-11/12 rounded-lg mt-4 py-5 px-7 m-auto" ref={ref_d}>
      
-       <table className="w-full m-auto bg-white rounded-lg">
+       <table className="w-full m-auto bg-white rounded-lg" ref={reff} onClick={hideForm}>
           <thead>
             <tr className=" border-b border-gray-300" >
               <th className="fontSize" >Name</th>
@@ -116,7 +185,7 @@ function searchCourses(keyword) {
           </thead>
           <tbody>
             {
-                state?.map((ele)=>(
+                state.slice(0,10)?.map((ele)=>(
         
                      <tr className=" border-b border-gray-300">
                        <td className="fontSize">{ele.course_Name}</td>
@@ -126,12 +195,17 @@ function searchCourses(keyword) {
                        <td className="fontSize">{ele.Day_of_Week}</td>
                        <td className="fontSize">{ele.Students}</td>
                        <td className="fontSize">{ele.Price}</td>
-                       <td className="fontSize"><button className=" px-4 bg-green-100 rounded-lg">{ele.Status}</button></td>
-                       <td className="fontSize"><img src='menu.png' className="w-4 m-auto cursor-pointer" /></td>
+                       <td className="fontSize"><button className=" px-4 bg-green-100 rounded-lg text-gray-500 text-sm">{ele.Status}</button></td>
+                       <td className="fontSize relative"><img src='menu.png' className="w-4 m-auto cursor-pointer"  onClick={()=>!hover&&displayBox(ele)}  />
+                       <div className="bg-white w-40 p-2 text-sm absolute -left-32 top-4" style={ele.flag ? {display:'block'} : {display:'none'}}>
+                          <div >
+                            <p className="cursor-pointer" onClick={()=>setStatus('Active')}>Edit Course</p>
+                            <p className="cursor-pointer" onClick={()=>setStatus('Closed')}>Close Course</p>
+                            <p className="cursor-pointer" onClick={()=>setStatus('Archieve')}>Archieve Course</p>
+                          </div>
+                      </div></td>
+                       
                     </tr>
-                  
-                   
-
                 ))
             }
            
@@ -139,13 +213,13 @@ function searchCourses(keyword) {
         </table>
        </div>
      
-        <div className="flex justify-end backdrop">
-             <button className='bg-red-200 text-2xl px-5 py-3 mt-40 mr-10 rounded-lg' onClick={addData}>+ <span className="text-xl">Add Course</span></button>
+        <div className="flex justify-end backdrop" onClick={displayForm}>
+             <button className='bg-red-200 text-2xl px-5 py-3 mt-40 mr-10 rounded-lg' >+ <span className="text-xl">Add Course</span></button>
         </div>
 
         {/* display:none */}
 
-        <form className="form w-5/12 bg-gray-600 py-5 m-auto p-8" >
+        <form className="form w-5/12 bg-gray-600 py-5 m-auto p-8 absolute top-32 right-1/4 fixed" style={flag ? {display:'block'} :{display:'none'}}>
             <span className="flex justify-start text-2xl mb-3">Add Course</span>
          <input type="text" name="" id="" placeholder="Course Name" className="fontsizeinput border border-gray-300 w-full m-1 text-xs rounded" onChange={(e)=>setInput({...input,course_Name:e.target.value})}/><br/>
          <input type="text" name="" id="" placeholder="Description" className="fontsizeinput border border-gray-300 w-full m-1 text-left text-xs rounded" onChange={(e)=>setInput({...input,Description:e.target.value})}/><br/>
@@ -179,6 +253,8 @@ function searchCourses(keyword) {
       </form>
 
       {/* //// */}
+
+      
       </div>
 
 

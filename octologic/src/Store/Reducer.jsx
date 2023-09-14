@@ -1,7 +1,8 @@
 // reducers.js
 const initialState = {
     courseData:[],
-    AllData:[]
+    AllData:[],
+    flag:false
   };
   
   const Reducer = (state = initialState, action) => {
