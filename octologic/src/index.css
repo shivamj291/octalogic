@@ -16,12 +16,16 @@
 .fontsizeinput{
   font-size: 15px;
   padding:8px 17px;
+  
 }
 .form{
   background-color: white;
+  
 }
 .fontSizeadd_or_cancel{
   font-size: 15px;
+  color:black;
+  cursor: pointer;
 }
 .form{
 

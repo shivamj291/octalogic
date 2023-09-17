@@ -17,6 +17,11 @@ const initialState = {
             ...state,
             AllData: [...state.AllData, action.payload], 
           };
+      case 'AUTH':
+        return{
+            ...state,
+            flag:action.payload
+          };
       default:
         return state;
     }

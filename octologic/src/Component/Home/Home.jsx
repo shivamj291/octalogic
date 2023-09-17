@@ -13,7 +13,6 @@ export default function Home() {
     const[filterByFees,setFilterByFess] = useState([])
     useEffect(()=>{
         getData();
-        
     },[])
 
     async function getData(){

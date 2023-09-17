@@ -12,3 +12,10 @@ export function ActionAll (value){
         payload:value
     })
 }
+
+export function ActionAuth (value){
+    Store.dispatch({
+        type:'AUTH',
+        payload:value
+    })
+}
